@@ -38,6 +38,7 @@ parse_dates = [
 @click.option('--month', default=1, type=int, help='Month of the data')
 @click.option('--target-table', default='yellow_taxi_data', help='Target table name')
 @click.option('--chunksize', default=100000, type=int, help='Chunk size for reading CSV')
+
 def run(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, target_table, chunksize):
     """Ingest NYC taxi data into PostgreSQL database."""
     prefix = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow'
